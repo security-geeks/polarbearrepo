@@ -8,7 +8,7 @@ Try to launch edge. It will crash the first time.\par
 When we launch it a second time, it will write the DACL while impersonating "SYSTEM".\par
 The trick here is to launch edge by clicking it on the taskbar or desktop, using "start microsoft-edge:" seems to result in correct impersonation.\par
 You can still do this completely programmatically.. since edge will always be in the same position in the task bar.. *cough* sendinput *cough*. There is probably other ways too.\par
-\b Another note, this bug is most definitely not restricted to edge. This will be triggered with other packages too. So you can definitely figure out a way to trigger this bug silently without having edge pop up. Or you could probably minimize edge as soon as it launches and close it as soon as the bug completes. I think it will also trigger by just launching edge once (it won't open any UI the first time since it crashes silently), but sometimes you may have to wait a little for it to fix our deleted folder I think when only launching once. I didn't do extensive testing.. don't really care.\b0\par
+\b Another note, this bug is most definitely not restricted to edge. This will be triggered with other packages too. So you can definitely figure out a way to trigger this bug silently without having edge pop up. Or you could probably minimize edge as soon as it launches and close it as soon as the bug completes. I think it will also trigger by just launching edge once, but sometimes you may have to wait a little. I didn't do extensive testing.. found this bug and quickly wrote up a poc, took me like 2 hours total, finding LPEs is easy.\b0\par
 To repro:\par
 1. Launch my poc\par
 2. Launch edge several times\par
